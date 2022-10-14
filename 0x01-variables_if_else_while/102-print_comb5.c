@@ -7,38 +7,27 @@
  */
 int main(void)
 {
-	int tens;
-	int ones;
-	int t;
-	int o;
+	int first;
+	int second;
 
-	for (tens = '0'; tens <= '9'; tens++) /* first pair */
+	for (first = 0; first <= 98; first++) /* first pair */
 	{
-		for (ones = '0'; ones <= '9'; ones++)
+		for (second = first + 1; second <= 99; second++) /* second pair */
 		{
-			for (t = tens; t <= '9'; t++) /* second pair */
-			{
-				for (o = ones; o <= '9'; o++)
-				{
-					if (ones != o)
-					{
-						putchar(tens);
-						putchar(ones);
-						putchar(' ');
-						putchar(t);
-						putchar(o);
+			putchar((first / 10) + '0');
+			putchar((first % 10) + '0');
+			putchar(' ');
+			putchar((second / 10) + '0');
+			putchar((second % 10) + '0');
 
-						if (!((tens == '9' && ones == '8') && (t == '9' && o == '9')))
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
-				}
-				o = '0';
-			}
+			if (first == 98 && second == 99)
+				continue;
+
+			putchar(',');
+			putchar(' ');
 		}
 	}
+
 	putchar('\n');
 	return (0);
 }
