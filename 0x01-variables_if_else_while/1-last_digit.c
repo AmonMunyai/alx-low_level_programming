@@ -18,7 +18,7 @@ int main(void)
 	/* your code goes there */
 	digit = n % 10;
 
-	printf("The last digit of %d is %d ", n, digit);
+	printf("Last digit of %d is %d ", n, digit);
 	if (digit > 5)
 	{
 		printf("and is greater than 5\n");
