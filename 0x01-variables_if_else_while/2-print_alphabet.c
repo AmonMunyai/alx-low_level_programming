@@ -7,16 +7,11 @@
  */
 int main(void)
 {
-	int a = 'a';
+	int a;
 
-	while (1)
+	for (a = 'a'; a < 123; a++)
 	{
-		if (a > 122)
-		{
-			break;
-		}
 		putchar(a);
-		a++;
 	}
 	putchar('\n');
 	return (0);
