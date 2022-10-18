@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+/**
+ * main - prints the first 98 fibinacci numbers, starting with 1 and 2
+ * Return: 0 (Success)
+ */
+int main(void)
+{
+	long first = 1, second = 2, next;
+	int i = 2;
+
+	printf("%ld, %ld", first, second);
+	while (i != 98)
+	{
+		next = first + second;
+		printf(", %ld", next);
+		first = second;
+		second = next;
+		i++;
+	}
+	printf("\n");
+	return (0);
+}
