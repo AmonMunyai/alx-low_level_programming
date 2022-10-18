@@ -7,7 +7,7 @@
 int main(void)
 {
 	long first = 1, second = 2, next;
-	int i = 3;
+	int i = 2;
 
 	printf("%ld, %ld", first, second);
 	while (i != 50)
