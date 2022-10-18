@@ -22,5 +22,4 @@ void print_alphabet_x10(void)
 		i++;
 		_putchar('\n');
 	}
-	return (0);
 }
