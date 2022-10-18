@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints the sum of the even valued terms in the fibonacci, not exceeding 4,000,000
+ * main - prints sum of even valued terms in the fib less than  4,000,000
  * Return: 0 (Success)
  */
 int main(void)
