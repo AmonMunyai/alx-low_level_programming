@@ -2,7 +2,7 @@
 
 /**
  * print_triangle - prints a triangle
- * @size: size of the triangle
+ * @size: size of triangle
  * Return: void
  */
 
@@ -16,12 +16,14 @@ void print_triangle(int size)
 	}
 	else
 	{
-		for (rows = 0; rows < size; rows++) /* rows */
+		for (rows = 1; rows <= size; rows++)
 		{
-			for (cols = size - 1; cols > rows; cols--) /* print spaces */
+			for (cols = 1; cols <= (size - rows); cols++)
 				_putchar(' ');
-			for (c = 0; c < rows + 1; c++) /* print characters */
+
+			for (c = 1; c <= rows; c++)
 				_putchar('#');
+
 			putchar('\n');
 		}
 	}
