@@ -8,7 +8,7 @@
 
 void print_triangle(int size)
 {
-	int rows, cols, c;
+	int height, width, c;
 
 	if (size <= 0)
 	{
@@ -16,12 +16,12 @@ void print_triangle(int size)
 	}
 	else
 	{
-		for (rows = 1; rows <= size; rows++)
+		for (height = 1; height <= size; height++)
 		{
-			for (cols = 1; cols <= (size - rows); cols++)
+			for (width = 1; width <= (size - height); width++)
 				_putchar(' ');
 
-			for (c = 1; c <= rows; c++)
+			for (c = 1; c <= height; c++)
 				_putchar('#');
 
 			putchar('\n');
