@@ -8,34 +8,21 @@
 
 int _atoi(char *s)
 {
-	int index = 0;
-	int num, digit, sign;
-	int flag = 0; /* number found in string, 0 - false */
+	int sign = 1;
+	int num = 0;
 
-	num = 0;
-	digit = 0;
-	sign = 1; /* assume num is positive */
-
-	while (s[index] != '\0')
+	do
 	{
-		if (s[index] >= '0' && s[index] <= '9') /* look for number characters */
-		{
-			digit = s[index] - 48; /* convert each char num to int num */
-			num = (num * 10) + digit; /* add int to num */
+		if (*s == '-')
+			sign *= -1;
 
-			if ((s[index - 1] == '-'))
-				sign = -1; /* num is negative */
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - 48);
 
-			if (s[index + 1] == ' ')
-				break; /* only convert first occurence of num(s) */
+		else if (num > 0)
+			break;
 
-			flag++; /* num found in string */
-		}
-		index++;
-	}
+	} while (*s++);
 
-	if (flag)
-		return (num * sign);
-	else
-		return (0);
+	return (num * sign);
 }
