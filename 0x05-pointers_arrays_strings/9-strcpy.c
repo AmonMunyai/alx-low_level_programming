@@ -9,17 +9,17 @@
 
 char *_strcpy(char *dest, char *src)
 {
-    int index = 0;
+	int index = 0;
 
-    /* get src string len */
-    while (src[index] != '\0')
-    {
-        dest[index] = src[index];
-        index++;
-    }
+	/* cpy src to dest */
+	while (src[index] != '\0')
+	{
+		dest[index] = src[index];
+		index++;
+	}
 
-    /* add null byte `\0` */
-    dest[index] = '\0';
-    
-    return dest;
+	/* add null byte `\0` */
+	dest[index] = '\0';
+
+	return (dest);
 }
