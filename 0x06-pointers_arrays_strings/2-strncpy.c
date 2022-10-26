@@ -18,7 +18,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	/* Add '\0' to end of string */
 	for (; index < n; index++)
-        dest[index] = '\0';
+		dest[index] = '\0';
 
 	return (dest);
 }
