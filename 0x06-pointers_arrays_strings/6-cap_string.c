@@ -8,9 +8,7 @@
 
 char *cap_string(char *src)
 {
-	char sep[] = {' ', '\t', '\n', ',', ';',
-		'.', '!', '?', '"', '(', ')', '{', '}'};
-	int i, j;
+	int i;
 
 	i = 0;
 
@@ -19,12 +17,20 @@ char *cap_string(char *src)
 		while (!(src[i] >= 'a' && src[i] <= 'z'))
 			i++;
 
-		j = 0;
-		while (src[i - 1] == sep[j])
-		{
+		if (src[i - 1] == ' ' ||
+			src[i - 1] == '\t' ||
+			src[i - 1] == '\n' ||
+			src[i - 1] == ',' ||
+			src[i - 1] == ';' ||
+			src[i - 1] == '.' ||
+			src[i - 1] == '!' ||
+			src[i - 1] == '?' ||
+			src[i - 1] == '"' ||
+			src[i - 1] == '(' ||
+			src[i - 1] == ')' ||
+			src[i - 1] == '{' ||
+			src[i - 1] == '}')
 			src[i] -= 32;
-			j++;
-		}
 
 		i++;
 	}
