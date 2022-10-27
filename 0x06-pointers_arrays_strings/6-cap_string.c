@@ -19,8 +19,12 @@ char *cap_string(char *src)
 		while (!(src[i] >= 'a' && src[i] <= 'z'))
 			i++;
 
-		for (j = 0; src[i - 1] == sep[j]; j++)
+		j = 0;
+		while (src[i - 1] == sep[j])
+		{
 			src[i] -= 32;
+			j++;
+		}
 
 		i++;
 	}
