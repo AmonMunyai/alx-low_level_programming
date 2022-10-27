@@ -29,7 +29,8 @@ char *cap_string(char *src)
 			src[i - 1] == '(' ||
 			src[i - 1] == ')' ||
 			src[i - 1] == '{' ||
-			src[i - 1] == '}')
+			src[i - 1] == '}' ||
+			i == 0)
 			src[i] -= 32;
 
 		i++;
