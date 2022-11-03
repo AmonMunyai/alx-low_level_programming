@@ -16,7 +16,7 @@ int _palindrome(char *s, int first, int last)
 	if (s[first] != s[last])
 		return (0);
 
-	_palindrome(s, first + 1, last - 1);
+	return (_palindrome(s, first + 1, last - 1));
 }
 
 /**
