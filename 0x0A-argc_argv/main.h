@@ -6,5 +6,6 @@
 #include <ctype.h>
 
 int _putchar(char c);
+int coins(int cents);
 
 #endif /* MAIN_H */
