@@ -14,12 +14,12 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 
-	mem = malloc(sizeof(*mem) * (max - min));
+	mem = malloc(sizeof(*mem) * ((max - min) + 1));
 
 	if (mem == NULL)
 		return (NULL);
 
-	for (i = 0; min < max; i++, min++)
+	for (i = 0; min <= max; i++, min++)
 		mem[i] = min;
 
 	return (mem);
