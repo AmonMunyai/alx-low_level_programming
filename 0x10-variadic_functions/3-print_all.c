@@ -66,14 +66,13 @@ void print_string(va_list args)
 void print_all(const char * const format, ...)
 {
 	int i, j;
-	char *separator = ", ";
+	char *separator = "";
 	va_list args;
 	my_type specifier[] = {
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
-		{"s", print_string},
-		{NULL, NULL}
+		{"s", print_string}
 	};
 
 	va_start(args, format);
@@ -84,18 +83,14 @@ void print_all(const char * const format, ...)
 	{
 		j = 0;
 
-		while (specifier[j].format_spec != NULL)
-		{
-			if (*(specifier[j].format_spec) == format[i])
-			{
-				specifier[j].f(args);
-
-				if (specifier[j + 1].format_spec == NULL)
-					separator = "";
-
-				printf("%s", separator);
-			}
+		while (j < 4 && (format[i] != *(specifier[j].format_spec)))
 			j++;
+
+		if (j < 4)
+		{
+			printf("%s", separator);
+			specifier[j].f(args);
+			separator = ", ";
 		}
 		i++;
 	}
