@@ -5,6 +5,7 @@
  * followed by a new line
  * @separator: string to be printed between the strings
  * @n: number of strings passed to function
+ * @...: a variable number of strings to be printed
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
@@ -19,7 +20,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		str = va_arg(args, char *);
 
-		(str == NULL) ? printf("(nil)") : printf("%s", str);
+		if (str == NULL)
+			printf("(nil)");
+		else
+			printf("%s", str);
 
 		if (separator != NULL && i + 1 < n)
 			printf("%s", separator);
