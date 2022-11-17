@@ -54,7 +54,13 @@ void print_string(va_list args)
 
 	str =  va_arg(args, char *);
 
-	(str == NULL) ? printf("(nil)") : printf("%s", str);
+	if (str == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+
+	printf("%s", str);
 }
 
 /**
@@ -77,9 +83,9 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 
-	i = 0;
+	i = 0, j = 0;
 
-	while (format[i] != '\0' && format)
+	while (format[i] && format)
 	{
 		j = 0;
 
