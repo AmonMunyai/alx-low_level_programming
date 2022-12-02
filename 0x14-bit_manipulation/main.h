@@ -1,7 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h> /* testing.. */
 #include <stdlib.h> /* memory allocation.. */
 
 int _putchar(char c);
