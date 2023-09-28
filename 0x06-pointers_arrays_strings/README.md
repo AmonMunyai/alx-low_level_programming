@@ -14,7 +14,7 @@ FYI: The standard library provides a similar function: `strcat`. Run `man strcat
 ```bash
 julien@ubuntu:~/0x06$ cat 0-main.c
 #include "main.h"
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -63,7 +63,7 @@ FYI: The standard library provides a similar function: `strncat`. Run `man strnc
 ```bash
 julien@ubuntu:~/0x06$ cat 1-main.c
 #include "main.h"
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -114,7 +114,7 @@ FYI: The standard library provides a similar function: `strncpy`. Run `man strnc
 ```bash
 julien@ubuntu:~/0x06$ cat 2-main.c
 #include "main.h"
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -127,7 +127,7 @@ int main(void)
     char *ptr;
     int i;
 
-    for (i = 0; i &lt; 98 - 1; i++)
+    for (i = 0; i < 98 - 1; i++)
     {
         s1[i] = '*';
     }
@@ -139,13 +139,13 @@ int main(void)
     ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 90);
     printf("%s", s1);
     printf("%s", ptr);
-    for (i = 0; i &lt; 98; i++)
+    for (i = 0; i < 98; i++)
     {
         if (i % 10)
         {
             printf(" ");
         }
-        if (!(i % 10) &amp;&amp; i)
+        if (!(i % 10) && i)
         {
             printf("\n");
         }
@@ -186,7 +186,7 @@ FYI: The standard library provides a similar function: `strcmp`. Run `man strcmp
 ```bash
 julien@ubuntu:~/0x06$ cat 3-main.c
 #include "main.h"
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -221,7 +221,7 @@ Write a function that reverses the content of an array of integers.
 ```bash
 julien@ubuntu:~/0x06$ cat 4-main.c
 #include "main.h"
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -235,7 +235,7 @@ void print_array(int *a, int n)
     int i;
 
     i = 0;
-    while (i &lt; n)
+    while (i < n)
     {
         if (i != 0)
         {
@@ -277,7 +277,7 @@ Write a function that changes all lowercase letters of a string to uppercase.
 ```bash
 julien@ubuntu:~/0x06$ cat 5-main.c
 #include "main.h"
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -311,7 +311,7 @@ Write a function that capitalizes all words of a string.
 ```bash
 julien@ubuntu:~/0x06$ cat 6-main.c
 #include "main.h"
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -360,7 +360,7 @@ Write a function that encodes a string into <a href="/rltoken/9v9KfpvWnL0GoMu5mo
 ```bash
 julien@ubuntu:~/0x06$ cat 7-main.c
 #include "main.h"
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
 /**
  * main - check the code for
@@ -398,7 +398,7 @@ Write a function that encodes a string using <a href="/rltoken/YRxmNA7BnP6yZhl09
 ```bash
 julien@ubuntu:~/0x06$ cat 100-main.c
 #include "main.h"
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -486,12 +486,11 @@ julien@ubuntu:~/0x06$
 ```
 ## 10. A dream doesn't become reality through magic; it takes sweat, determination and hard work
 
-<img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/21b4fc5c1b5df84e6ae4fe8807aa359d929e748a.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230928%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230928T175005Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ef250396a35583870ced3ba922fef6428f77284b8d2284177f718f8836ea0c56" alt="" loading="lazy" style="">
+<p><img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/21b4fc5c1b5df84e6ae4fe8807aa359d929e748a.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230928%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230928T181758Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=0546995f0d0b61799783cba935d2d3e245594b943069f7a1621b54b0e8365fe1" alt="" loading="lazy" style="">
 
 
 
-Add one line to <a href="https://github.com/alx-tools/make_magic_happen/blob/master/magic.c" title="this code" target="_blank">this code</a>, so that the program prints `a[2] = 98`, followed by a new line.
-
+Add one line to <a href="https://github.com/alx-tools/make_magic_happen/blob/master/magic.c" title="this code" target="_blank">this code</a>, so that the program prints `a[2] = 98`, followed by a new line.</p>
 
 - You are not allowed to use the variable `a` in your new line of code
 - You are not allowed to modify the variable `p`
@@ -522,7 +521,7 @@ Write a function that adds two numbers.
 ```bash
 julien@ubuntu:~/0x06$ cat 103-main.c
 #include "main.h"
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -609,7 +608,7 @@ Write a function that prints a buffer.
 ```bash
 julien@ubuntu:~/0x06$ cat 104-main.c
 #include "main.h"
-#include &lt;stdio.h&gt;
+#include <stdio.h>
 
 /**
  * main - check the code
@@ -644,3 +643,11 @@ This is a string!
 00000078: 7366 756e 0a00           sfun..
 julien@ubuntu:~/0x06$ 
 ```
+
+---
+
+*This README.md file was automatically generated by [alx-tool](https://github.com/AmonMunyai/alx-tool).*
+
+*Please note that this README is dynamically generated and may not always reflect the most up-to-date information about the project.*
+
+---
